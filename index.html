@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVL Tree Visualization</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="buttom.css">
+</head>
+<body>
+    <div id = "nav">
+        <label for="searchInput">Enter ID to search :</label>
+        <input type="text" id="searchInput">
+        <button class="button-37" onclick="searchAndDisplay()">Search</button>
+        
+    </div>
+    <div style="text-align: center; ">
+        <button class="button-33"  onclick="displayAll()">show all</button>
+        <button class="button-33" style="background-color: rgb(236, 228, 154);" onclick="showInsertPopup()">Edit room</button>
+    </div>
+    <div id="output"></div>
+
+
+    <!-- Popup for Insert -->
+    <div class="popup" id="insertPopup">
+        <div class="popup-content">
+            <span class="close" onclick="closeInsertPopup()">&times;</span>
+            <label for="insertKey">Key:</label>
+            <input type="text" id="insertKey">
+            <label for="insertStatus">Status:</label>
+            <select id="insertStatus" onchange="toggleReturnDateInput()">
+                <option value="ว่าง">ว่าง</option>
+                <option value="ไม่ว่าง">ไม่ว่าง</option>
+            </select>
+            <label for="insertRentalDate">Rental Date:</label>
+            <input type="date" id="insertRentalDate" disabled>
+            <label for="insertReturnDate">Return Date:</label>
+            <input type="date" id="insertReturnDate"disabled>
+            <button class="close-button" onclick="insertData()">Insert</button>
+        </div>
+    </div>
+    
+    <script src="avl-tree.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
